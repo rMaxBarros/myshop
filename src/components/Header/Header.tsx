@@ -1,3 +1,5 @@
+import { FiLogIn, FiLogOut, FiShoppingCart } from 'react-icons/fi';
+
 import * as S from "./styles"
 
 export const Header: React.FC = () => {
@@ -7,8 +9,15 @@ export const Header: React.FC = () => {
                 <S.HeaderTitle>MyShop.</S.HeaderTitle>
 
                 <S.ButtonsWrapper>
-                    <S.AuthButton>Login</S.AuthButton>
-                    <S.CartButton>Carrinho</S.CartButton>
+                    <S.AuthButton>
+                        Login
+                        <FiLogIn />
+                    </S.AuthButton>
+                    
+                    <S.CartButton>
+                        Carrinho
+                        <FiShoppingCart />
+                    </S.CartButton>
                 </S.ButtonsWrapper>
             </S.Wrapper>
 
