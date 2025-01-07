@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { GlobalStyles } from './styles/GlobalStyles';
 
 // Componente estilizado.
 const Title = styled.h1`
@@ -15,9 +16,10 @@ const Title = styled.h1`
 // Componente funcional do React. Função que retorna HTML.
 function App() {
   return (
-    <Title>Styled Components
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore sunt sit nostrum mollitia voluptate atque et consectetur facilis ut, eligendi saepe consequatur ad unde dolores dolor ea, laboriosam, rerum iure.</p>
-    </Title>
+    <>
+    <Title>Styled Components</Title>
+      <GlobalStyles />
+    </>
   );
 }
 
