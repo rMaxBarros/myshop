@@ -1,9 +1,9 @@
-import { HeaderTitle, StyledHeader } from "./styles"
+import * as S from "./styles"
 
 export const Header: React.FC = () => {
     return(
-        <StyledHeader>
-            <HeaderTitle>MyShop.</HeaderTitle>
-        </StyledHeader>
+        <S.StyledHeader>
+            <S.HeaderTitle>MyShop.</S.HeaderTitle>
+        </S.StyledHeader>
     )
 }
