@@ -18,6 +18,8 @@ export const Wrapper = styled.div`
 
 export const HeaderTitle = styled.h1`
     color: white;
+    font-size: 1.6rem;
+    font-weight: 500;
 `;
 
 export const ButtonsWrapper = styled.div`

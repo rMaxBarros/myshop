@@ -9,7 +9,8 @@ export const GlobalStyles = createGlobalStyle`
         box-sizing: border-box;
     }
 
-    body {
+    body, button, input {
         background-color: F7F7F7;
+        font-family: 'Poppins', sans-serif;
     }
 `;
