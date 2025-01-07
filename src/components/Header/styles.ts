@@ -1,14 +1,44 @@
 import styled from 'styled-components';
 
-export const StyledHeader = styled.header``;
+export const StyledHeader = styled.header`
+    background-color: navy;
+`;
 
 // Wrapper: Usado para envolver outras coisas
-export const Wrapper = styled.div``;
+export const Wrapper = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-export const HeaderTitle = styled.h1``;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    height: 60px;
+`;
 
-export const ButtonsWrapper = styled.div``;
+export const HeaderTitle = styled.h1`
+    color: white;
+`;
 
-export const AuthButton = styled.button``;
+export const ButtonsWrapper = styled.div`
+    display: flex;
+    gap: 1rem;
+`;
 
-export const CartButton = styled.button``;
+export const AuthButton = styled.button`
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    padding: 0 1rem;
+    background-color: green;
+    color: white;
+`;
+
+export const CartButton = styled.button`
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    padding: 0 1rem;
+    background-color: violet;
+    color: black;
+`;
