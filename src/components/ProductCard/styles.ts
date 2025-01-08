@@ -9,15 +9,23 @@ export const Card = styled.article`
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
 `;
 
 export const ProductImage = styled.img`
     width: 200px;
+    height: 400px;
+
+    object-fit: contain;
 `;
 
 export const ProductTitle = styled.h2`
     font-weight: 500;
     font-size: 1.2rem;
+
+    min-height: 3rem;
 
     margin-top: 1rem;
 `;
