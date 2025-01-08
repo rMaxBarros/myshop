@@ -11,14 +11,15 @@ export const ProductCard: React.FC<ProductCardProps> = ({
 }) => {
     return (
         <S.Card>
-            <S.ProductImage src='https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg'
-                alt='' />
+            <S.ProductImage src={product.image}
+                alt={product.description}
+            />
 
-            <S.ProductTitle>Mens Casual Premium Slim Fit T-Shirts</S.ProductTitle>
+            <S.ProductTitle>{product.title}</S.ProductTitle>
 
             <S.ReviewPriceContainer>
-                <S.Review>4.1</S.Review>
-                <S.Price>$22.3</S.Price>
+                <S.Review>({product.rating.rate})</S.Review>
+                <S.Price>{product.price}</S.Price>
             </S.ReviewPriceContainer>
 
             <S.AddToCartButtonWrapper>
