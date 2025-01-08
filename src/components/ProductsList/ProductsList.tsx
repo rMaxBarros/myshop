@@ -5,11 +5,6 @@ export const ProductsList: React.FC = () => {
     return (
         <S.Container>
             <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
         </S.Container>
     )
 }
