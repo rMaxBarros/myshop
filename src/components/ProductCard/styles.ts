@@ -3,12 +3,16 @@ import styled from 'styled-components';
 export const Card = styled.article`
     background-color: white;
     width: 100%;
-    padding: 1rem;
+    padding: 2rem;
     margin: 0 auto; // Centraliza a imagem
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `;
 
 export const ProductImage = styled.img`
-    width: 90%;
+    width: 200px;
 `;
 
 export const ProductTitle = styled.h2`
