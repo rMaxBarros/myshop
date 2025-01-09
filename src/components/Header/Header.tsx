@@ -15,7 +15,8 @@ export const Header: React.FC = () => {
     const dispatch = useDispatch(); // Hook para dispachar as ações.
 
     const [showCart, setShowCart] = useState(false);
-    const isLogged = false;
+    // Lógica para saber se o usuário está logado ou não
+    const isLogged = user !== null;
 
     // Dispachando a ação de login ou de logout por meio do redux
     function handleUserAuth() {
