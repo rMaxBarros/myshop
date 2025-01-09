@@ -8,3 +8,7 @@ import { userReducer } from "./UserReducer/reducer";
 export const rootReducer = combineReducers({
     userReducer: userReducer,
 });
+
+// Quando usa o redux com typescript, no root-reducer, é preciso informar qual é o tipo dele.
+// Aqui, está sendo exportado o tipo dele para que seja possível utilizar no header.
+export type RootReducer = ReturnType<typeof rootReducer>;

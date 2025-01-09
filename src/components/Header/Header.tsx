@@ -3,13 +3,14 @@ import { useState } from 'react';
 import { FiLogIn, FiLogOut, FiShoppingCart } from 'react-icons/fi';
 
 import { useSelector } from 'react-redux';
+import { RootReducer } from '../../redux/root-reducer';
 
 import * as S from "./styles"
 
 export const Header: React.FC = () => {
     // Acessando o userReducer
     // Retorna os dados/estado que estão guardados no userReducer
-    const objeto = useSelector((rootReducer: any) => rootReducer.userReducer);
+    const objeto = useSelector((rootReducer: RootReducer) => rootReducer.userReducer);
 
     console.log(objeto);
 
