@@ -14,7 +14,10 @@ interface UserState {
 
 // Assim que a aplicação iniciar, o estado que guarda os dados do usuário comece com alguma coisa.
 const initialState: UserState = {
-    user: null, // De início inicia sem nada.
+    user: {
+        name: 'Max Barros',
+        email: 'max@email.com',
+    }, // De início inicia sem nada.
 }
 
 // Reducer: guarda o estado que desejamos compartilhar na aplicação 

@@ -2,9 +2,17 @@ import { Cart } from '../Cart/Cart';
 import { useState } from 'react';
 import { FiLogIn, FiLogOut, FiShoppingCart } from 'react-icons/fi';
 
+import { useSelector } from 'react-redux';
+
 import * as S from "./styles"
 
 export const Header: React.FC = () => {
+    // Acessando o userReducer
+    // Retorna os dados/estado que estão guardados no userReducer
+    const objeto = useSelector((rootReducer: any) => rootReducer.userReducer);
+
+    console.log(objeto);
+
     const [showCart, setShowCart] = useState(false);
     const isLogged = false;
 
