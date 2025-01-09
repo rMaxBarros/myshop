@@ -14,10 +14,7 @@ interface UserState {
 
 // Assim que a aplicação iniciar, o estado que guarda os dados do usuário comece com alguma coisa.
 const initialState: UserState = {
-    user: {
-        name: 'Max Barros',
-        email: 'max@email.com',
-    }, // De início inicia sem nada.
+    user: null, // De início inicia sem nada.
 }
 
 // Reducer: guarda o estado que desejamos compartilhar na aplicação 
@@ -35,17 +32,22 @@ interface userAction {
 // Função que altera o estado inicial
 // Todo reducer precisa retornar o nosso estado atualizado. Ou seja, após a aplicação da Action
 export function userReducer(state = initialState, action: userAction): UserState {
-    // :UserState informa que a função é do tipo UserState
-    // Lidando com as ações
+    // :UserState informa que a função é do tipo UserState, retornando um valor deste tipo.
+    // Lidando com as ações de login e logout
     // Padronização dos nomes das actions: nomeDoReducer/nomeDaAção
     if (action.type === 'user/login') {
         return {
-            // Retorna o novo estado, nesse caso, o usuário logado.
-            user:  {
-                name: 'Max Barros',
-                email: 'max@email.com'
-            }
+            // Retorna o estado do jeito que ele está, nesse caso, o usuário logado.
+            ...state,
+            user: action.payload as User,
+            // Quando estiver fazendo login, diz que o usuário vai receber o action.payload como um User, afirmando que ele irá vir no login e removendo o erro que estava antes em "user:"
+        }
+    } else if (action.type === 'user/logout') {
+        return {
+            ...state,
+            user: null,
         }
     }
+    
     return state;
 }
