@@ -44,10 +44,10 @@ export function userReducer(state = initialState, action: userAction): UserState
         }
     } else if (action.type === 'user/logout') {
         return {
-            ...state,
+            ...state, // Precisa ter esse state pra garantir que nada será sobrescrito, pois poderia haver outras informações no UserState.
             user: null,
         }
     }
-    
+
     return state;
 }
