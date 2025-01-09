@@ -30,4 +30,19 @@ interface userAction {
 
 // TODOS os Reducers precisam estar dentro de um Root Reducer.
 // Função que altera o estado inicial
-export function userReducer(state = initialState, action: userAction) {}
+// Todo reducer precisa retornar o nosso estado atualizado. Ou seja, após a aplicação da Action
+export function userReducer(state = initialState, action: userAction): UserState {
+    // :UserState informa que a função é do tipo UserState
+    // Lidando com as ações
+    // Padronização dos nomes das actions: nomeDoReducer/nomeDaAção
+    if (action.type === 'user/login') {
+        return {
+            // Retorna o novo estado, nesse caso, o usuário logado.
+            user:  {
+                name: 'Max Barros',
+                email: 'max@email.com'
+            }
+        }
+    }
+    return state;
+}
