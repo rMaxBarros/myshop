@@ -10,9 +10,9 @@ import * as S from "./styles"
 export const Header: React.FC = () => {
     // Acessando o userReducer
     // Retorna os dados/estado que estão guardados no userReducer
-    const objeto = useSelector((rootReducer: RootReducer) => rootReducer.userReducer);
+    const { user } = useSelector((rootReducer: RootReducer) => rootReducer.userReducer);
 
-    console.log(objeto);
+    console.log(user);
 
     const [showCart, setShowCart] = useState(false);
     const isLogged = false;
